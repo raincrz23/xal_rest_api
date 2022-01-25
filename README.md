@@ -1,14 +1,16 @@
 # xal_rest_api
 Rest API para el challenge
 
+Intenté instalar Docker en mi computadora portátil, sin embargo, parece que faltaban ciertas configuraciones o archivos para que funcione correctamente. Creo que tuvo que ver con una cierta actualización de wsl, sin embargo, dado que esta es mi computadora portátil de trabajo que estoy usando, no pude instalar el archivo de actualización debido a las restricciones que mi empresa impuso en nuestras máquinas. Sin embargo, dado esto, intenté mantener la API lo más simple posible usando solo python y postgres 13.
+
 Versiones de:
-Python == 3.7
-Flask == 2.0.1
-Flask-SQLAlchemy == 2.5.1
-marshmallow == 3.12.1
-pip == 21.2.4
-psycopg2-binary == 2.8.6
-SQLAlchemy == 1.4.17
+    Python == 3.7
+    Flask == 2.0.1
+    Flask-SQLAlchemy == 2.5.1
+    marshmallow == 3.12.1
+    pip == 21.2.4
+    psycopg2-binary == 2.8.6
+    SQLAlchemy == 1.4.17
 
 Si python está instalado con pip, adquirir los paquetes necesarios para que la aplicación funcione es muy sencillo con el archivo proporcionado 'requirements.txt'
 
@@ -39,8 +41,7 @@ Además, proporcioné consultas sql para insertar registros en las tablas para p
 
 Por molesto que sea, el problema se resuelve repitiendo la llamada tres veces más para que el employee_id se establezca en 4, lo que corresponde a un nuevo registro en la tabla.
 
-Las peticiones GET, POST, PUT, DELETE actuarán sobre los objetos del empleado y requerirán datos en formato json para los métodos POST y PUT.
-Peticiones:
+Las peticiones GET, POST, PUT, DELETE actuarán sobre los objetos del empleado y requerirán datos en formato json para los métodos POST y PUT:
 
     GET /all_employees
     Devuelve todos los registros de la tabla de empleados.
