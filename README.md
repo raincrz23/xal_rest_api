@@ -41,6 +41,7 @@ Además, proporcioné consultas sql para insertar registros en las tablas para p
 
 Por molesto que sea, el problema se resuelve repitiendo la llamada tres veces más para que el employee_id se establezca en 4, lo que corresponde a un nuevo registro en la tabla.
 
+
 Las peticiones GET, POST, PUT, DELETE actuarán sobre los objetos del empleado y requerirán datos en formato json para los métodos POST y PUT:
 
     GET /all_employees
@@ -81,3 +82,23 @@ Las peticiones GET, POST, PUT, DELETE actuarán sobre los objetos del empleado y
 
     DELETE /employee/<int:id>
     Elimina el registro correspondiente, junto con sus relaciones empleado-departamento, dado el id proporcionado.
+
+
+Una vez que todo esto está configurado, la ejecución de la aplicación se realiza con el comando:
+
+    python app.py
+
+Normalmente usando localhost se pueden llamar los methodos, sin embargo, por si hay alguna duda la ruta se puede encontrar en el mismo cmd:
+
+    Ejemplo:
+    
+    (xalrestapi) ~dir\xal_rest_api>python app.py
+     * Serving Flask app 'app' (lazy loading)
+     * Environment: production
+    WARNING: This is a development server. Do not use it in a production deployment.
+    Use a production WSGI server instead.
+    * Debug mode: on
+    * Restarting with stat
+    * Debugger is active!
+    * Debugger PIN: 115-576-441
+    * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) # La url para las peticiones
